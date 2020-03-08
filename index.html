@@ -1,0 +1,64 @@
+<!--기본세팅
+<!doctype html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+</html>
+-->
+<!doctype html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<title>Checkbox</title>
+		<script src=custom.js></script>
+	</head>
+	<body>
+		<h1 style='color:violet'>
+			Checkbox
+		</h1>
+		<!-- <a href='testfile.html'>goto test</a> -->
+		<form>
+			<input type='checkbox' class='cbs' id='cb1'  onclick="CheckOn(this)" >
+			<input type='text' id='input1'><br>
+			<input type='checkbox' class='cbs'id='cb2'  onclick="CheckOn(this)">
+			<input type='text' id='input2'><br>
+			<input type='checkbox' class='cbs'id='cb3'  onclick="CheckOn(this)">
+			<input type='text' id='input3'><br>
+			<input type='checkbox' class='cbs'id='cb4'  onclick="CheckOn(this)">
+			<input type='text' id='input4'><br>
+			<input type='checkbox' class='cbs'id='cb5'  onclick="CheckOn(this)">
+			<input type='text' id='input5'><br>
+			<input type='checkbox' class='cbs'id='cb6'  onclick="CheckOn(this)">
+			<input type='text' id='input6'><br>
+			<input type='checkbox' class='cbs'id='cb7'  onclick="CheckOn(this)">
+			<input type='text' id='input7'><br>
+			<input type='checkbox' class='cbs'id='cb8'  onclick="CheckOn(this)">
+			<input type='text' id='input8'><br>
+			<input type='checkbox' class='cbs'id='cb9'  onclick="CheckOn(this)">
+			<input type='text' id='input9'><br>
+			
+			<input type='button' value='print' onclick="printDatas(this)">
+		</form>
+	</body>
+</html>
+<!--
+체크박스 프로젝트
+
+v내용 입력
+v체크박스 체크시 내용 라인긋기, 색 회색으로 변경
+vprint 버튼 ->콘솔출력 (json? 표? )
+json or 차트로 뽑는법?
+
+문제들
+_ 10개 이상 박스가 늘어나면 inputID를 어떻게 해야할지 모르겠다.
+_
+
+쿠키,캐시를 사용하지 않으면 새로고침시 전부 초기화됨
+자동으로 박스 추가하는방법?
+저장, 계정&비밀번호 페이지 만들어서 개별 저장할 수 있게
+
