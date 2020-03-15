@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Checkbox</title>
+    <script></script>
+</head>
+
+<body>
+    <h1 style='color:darkslategrey'>
+        우리의 Checkbox
+    </h1>
+    <p style='color:gray'>
+        다음목표 : 나의 Checkbox
+    </p>
+    <p style='color:gray'>
+        ${test}
+    </p>
+    <form action='/newItem'>
+        <input type='text' id='1' placeholder='Write new item'>
+        <input type='submit' value='enter'>
+    </form>
+</body>
+
+</html>
