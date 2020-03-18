@@ -268,29 +268,17 @@ var app = http.createServer(function(request, response) {
         fs.readFile('data/CheckList.json', 'utf-8', (err, lists)=>{
             let Jlists=JSON.parse(lists);         //읽은파일 json파일로 변환
             //여기할차례!!!
-            for (let i=0;i<Jlists.length;i++){ //좀더 나은 정렬방법??
-                if(Jlists[i].checked){
-                    
-                }
+            for (let i=Jlists.length-1;i>=0;i--){ //좀더 나은 정렬방법??
+                if(Jlists[i].ch){
+                    Jlists.splice(i, 1);
+                };
             };
-                
-            
-            // console.log(Jlists[searchNum]); 
-            // if(afterItem===Jlists[searchNum].item){
-            //     response.writeHead(200);
-            //     response.end('<!doctype html>  <script>alert("write the changed item")</script>');
-                
-            // }else if (searchNum===-1){
-            //     response.writeHead(200);
-            //     response.end('<!doctype html>  <script>alert("Error")</script>');
-            // }else{
-            //     Jlists[searchNum].item=afterItem;
-            //     let Jlists_string=JSON.stringify(Jlists);
-            //     fs.writeFile('data/CheckList.json',Jlists_string, (err)=>{
-            //         response.writeHead(302, {Location:'/'});
-            //         response.end();
-            //     });
-            // }
+            console.log(Jlists);
+            let Jlists_string=JSON.stringify(Jlists);
+            fs.writeFile('data/CheckList.json',Jlists_string, (err)=>{
+                response.writeHead(302, {Location:'/'});
+                response.end();
+            });
         });
     }else{
         response.writeHead(404);
